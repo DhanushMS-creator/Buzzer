@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigyaanrang Host Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="host-login-shell">
+      <section class="host-card" aria-label="Host login">
+        <img src="/atria.png" alt="Atria Institute" class="atria-badge" />
+        <img src="/iste-logo.svg" alt="ISTE Logo" class="iste-badge" />
+
+        <p class="eyebrow">Buzzer Admin Access</p>
+        <h1>Host Login</h1>
+        <p class="subhead">Open or Close Rounds. Track First Hit. View Leaderboard.</p>
+
+        <form id="hostLoginForm" novalidate>
+          <label for="hostUsername">Host Username</label>
+          <input id="hostUsername" name="hostUsername" type="text" autocomplete="username" required />
+
+          <label for="hostPassword">Host Password</label>
+          <input
+            id="hostPassword"
+            name="hostPassword"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+
+          <button id="hostSubmitBtn" type="submit">
+            <span class="btn-text">Enter Control Room</span>
+            <span aria-hidden="true">⚡</span>
+          </button>
+        </form>
+
+        <p class="back-link-wrap">
+          <a href="/" class="back-link">Back to Player Login</a>
+        </p>
+      </section>
+
+      <div id="statusToast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <script type="module" src="/src/host-login.js"></script>
+  </body>
+</html>

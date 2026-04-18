@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigyaanrang Live Buzzer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="arena-shell">
+      <header class="topbar">
+        <div class="player-chip">
+          <div class="avatar" id="avatarBadge">VG</div>
+          <div>
+            <p class="kicker">Player</p>
+            <p class="team" id="teamNameLabel">Vigyaanrang</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="arena-main">
+        <p class="live-pill"><span class="dot"></span> Live Session</p>
+        <h1>Ready to Strike?</h1>
+
+        <div class="ring-wrap">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <button id="hitBtn" class="hit-btn" type="button">
+            <span class="hit-text">HIT ME</span>
+            <span class="hit-icon">⚡</span>
+          </button>
+        </div>
+
+        <p id="statusText" class="status-copy">
+          Wait for the host prompt. Fastest finger earns.
+        </p>
+      </section>
+
+      <div id="arenaToast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script type="module" src="/src/arena.js"></script>
+  </body>
+</html>

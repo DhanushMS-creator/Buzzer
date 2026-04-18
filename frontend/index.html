@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigyaanrang Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="login-stage">
+        <div class="ambient ambient-top"></div>
+        <div class="ambient ambient-bottom"></div>
+
+        <section class="card" aria-label="Vigyaanrang player login">
+          <img src="/atria.png" alt="Atria Institute" class="atria-badge" />
+          <img src="/iste-logo.svg" alt="ISTE Logo" class="iste-badge" />
+
+          <p class="eyebrow">The Ultimate Technical Battle</p>
+          <h1>Vigyaanrang - Connections</h1>
+          <p class="subhead">Where Bytes and Beats Collide</p>
+
+          <form id="loginForm" novalidate>
+            <label for="teamNo">Team No</label>
+            <div class="field-wrap">
+              <input
+                id="teamNo"
+                name="teamNo"
+                type="text"
+                placeholder="e.g. 01,02,03"
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <label for="teamName">Team Name</label>
+            <div class="field-wrap">
+              <input
+                id="teamName"
+                name="teamName"
+                type="text"
+                placeholder="Victory warriors"
+                autocomplete="off"
+                required
+              />
+            </div>
+
+            <button id="submitBtn" type="submit">
+              <span class="btn-text">Ready</span>
+              <span class="btn-pulse" aria-hidden="true">⚡</span>
+            </button>
+          </form>
+
+          <p class="policy">
+            By entering, you agree to the competition terms and fair play policy.
+          </p>
+          
+          <p class="arena-link-wrap host-link-wrap">
+            <a href="/host-login.html" class="arena-link">Host Login</a>
+          </p>
+        </section>
+
+        <div id="statusToast" class="toast" role="status" aria-live="polite"></div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

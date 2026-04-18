@@ -1,0 +1,239 @@
+:root {
+  --bg: #05020f;
+  --bg-soft: #0f0725;
+  --text: #f7eeff;
+  --muted: #bea9dd;
+  --line: rgba(190, 130, 255, 0.35);
+  --field: rgba(28, 14, 53, 0.82);
+  --danger: #ff7f9f;
+  --success: #84f3c2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 80% 18%, rgba(168, 100, 255, 0.32), transparent 35%),
+    radial-gradient(circle at 15% 78%, rgba(255, 123, 95, 0.2), transparent 38%),
+    linear-gradient(140deg, var(--bg) 0%, #070315 45%, var(--bg-soft) 100%);
+}
+
+.host-login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.host-card {
+  position: relative;
+  width: min(100%, 500px);
+  border-radius: 24px;
+  border: 1px solid rgba(188, 138, 255, 0.3);
+  background: rgba(13, 7, 28, 0.82);
+  box-shadow: 0 24px 60px rgba(4, 0, 20, 0.7);
+  padding: 2rem 1.3rem 1.25rem;
+  padding-top: clamp(6rem, 9vw, 7.4rem);
+}
+
+.atria-badge {
+  position: absolute;
+  left: clamp(-20px, -3vw, -8px);
+  top: clamp(-66px, -7vw, -40px);
+  width: clamp(100px, 14vw, 156px);
+  max-width: 36%;
+  height: auto;
+  border-radius: 14px;
+  object-fit: contain;
+  box-shadow: 0 10px 24px rgba(4, 0, 16, 0.62);
+}
+
+.iste-badge {
+  position: absolute;
+  right: clamp(-28px, -2.2vw, -8px);
+  top: clamp(-42px, -4vw, -20px);
+  width: clamp(68px, 9vw, 104px);
+  padding: 5px;
+  border-radius: 999px;
+  border: 2px solid rgba(202, 155, 255, 0.4);
+  background: rgba(13, 8, 30, 0.7);
+  box-shadow: 0 0 22px rgba(167, 114, 255, 0.7);
+}
+
+.eyebrow {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+h1 {
+  margin: 0.7rem 0 0.15rem;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+}
+
+.subhead {
+  margin: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  color: #c9b7e4;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+form {
+  margin-top: 1.2rem;
+}
+
+label {
+  display: block;
+  margin: 0.95rem 0 0.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.74rem;
+  color: #cfb9ef;
+}
+
+input {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--field);
+  color: var(--text);
+  padding: 0.84rem 1rem;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(216, 171, 255, 0.8);
+  box-shadow: 0 0 0 4px rgba(157, 102, 255, 0.24);
+}
+
+button {
+  margin-top: 1.1rem;
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(90deg, #9d66ff, #be87ff 62%, #8f58f5);
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.8;
+  cursor: progress;
+}
+
+.back-link-wrap {
+  margin: 0.95rem 0 0;
+  text-align: center;
+}
+
+.back-link {
+  color: #d7c1ff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(215, 193, 255, 0.45);
+  padding-bottom: 2px;
+}
+
+.toast {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 360px;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 220ms ease;
+  border: 1px solid transparent;
+  background: rgba(9, 4, 22, 0.88);
+  color: #f0e5ff;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.error {
+  border-color: rgba(255, 127, 159, 0.35);
+  color: var(--danger);
+}
+
+.toast.success {
+  border-color: rgba(132, 243, 194, 0.35);
+  color: var(--success);
+}
+
+@media (max-width: 760px) {
+  .host-card {
+    width: min(100%, 620px);
+    padding-top: 5.8rem;
+  }
+
+  .atria-badge {
+    left: 8px;
+    top: -26px;
+    width: min(33vw, 132px);
+    max-width: none;
+  }
+
+  .iste-badge {
+    right: 8px;
+    top: -28px;
+    width: 74px;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
+  }
+
+  .subhead {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 420px) {
+  .host-login-shell {
+    padding: 0.8rem 0.55rem;
+  }
+
+  .host-card {
+    padding-top: 5.2rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+
+  .atria-badge {
+    width: min(30vw, 104px);
+    top: -20px;
+    left: 6px;
+  }
+
+  .iste-badge {
+    width: 64px;
+    top: -24px;
+  }
+}

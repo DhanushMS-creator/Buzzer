@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigyaanrang Host Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="host-shell">
+      <header class="host-topbar">
+        <div>
+          <p class="kicker">Host Session</p>
+          <h1>Control Room</h1>
+          <p class="host-user" id="hostUserLabel">host</p>
+        </div>
+        <button id="logoutBtn" class="ghost-btn" type="button">Logout</button>
+      </header>
+
+      <section class="panel">
+        <p class="section-title">Round Controls</p>
+        <div class="control-grid">
+          <label>Round Number</label>
+          <p id="roundNoLabel" class="round-value">1</p>
+
+          <div class="button-row">
+            <button id="openBtn" class="action-btn" type="button">Start Round</button>
+            <button id="nextBtn" class="action-btn alt" type="button">Next Round</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <p class="section-title">Who Hit First</p>
+        <p id="winnerLabel" class="winner-copy">No team has pressed the buzzer yet.</p>
+      </section>
+
+      <section class="panel">
+        <p class="section-title">Buzzer Leaderboard</p>
+        <ul id="leaderboardList" class="leaderboard"></ul>
+      </section>
+
+      <section class="panel">
+        <p class="section-title">Player Login History</p>
+        <ul id="playerLoginList" class="leaderboard"></ul>
+        <button id="clearLoginsBtn" class="ghost-btn" type="button">Clear History</button>
+      </section>
+
+      <div id="hostToast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script type="module" src="/src/host.js"></script>
+  </body>
+</html>

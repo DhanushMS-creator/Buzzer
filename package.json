@@ -1,0 +1,29 @@
+{
+  "name": "buzzer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd frontend && vite",
+    "dev:server": "nodemon backend/server.js",
+    "build": "cd frontend && vite build",
+    "preview": "cd frontend && vite preview",
+    "start": "node backend/server.js",
+    "start:legacy": "node backend/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.4",
+    "vite": "^5.4.1"
+  }
+}

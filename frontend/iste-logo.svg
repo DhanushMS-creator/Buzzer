@@ -1,0 +1,67 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ISTE</title>
+  <desc id="desc">Circular ISTE emblem with a purple neon ring and technical education motif.</desc>
+  <defs>
+    <radialGradient id="isteCenter" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(256 256) rotate(90) scale(168)">
+      <stop stop-color="#2A163E"/>
+      <stop offset="0.72" stop-color="#150E22"/>
+      <stop offset="1" stop-color="#09060F"/>
+    </radialGradient>
+    <linearGradient id="isteRing" x1="98" y1="72" x2="414" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8ECFF"/>
+      <stop offset="0.42" stop-color="#C987FF"/>
+      <stop offset="1" stop-color="#8A3CFF"/>
+    </linearGradient>
+    <filter id="isteGlow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.54 0 1 0 0 0.25 0 0 1 0 1 0 0 0 0.82 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <path id="topArc" d="M 92 256 A 164 164 0 0 1 420 256"/>
+    <path id="bottomArc" d="M 420 256 A 164 164 0 0 1 92 256"/>
+  </defs>
+  <rect width="512" height="512" fill="transparent"/>
+  <g filter="url(#isteGlow)">
+    <circle cx="256" cy="256" r="224" stroke="url(#isteRing)" stroke-width="18"/>
+    <circle cx="256" cy="256" r="192" stroke="#B96CFF" stroke-opacity="0.26" stroke-width="3"/>
+    <circle cx="256" cy="256" r="172" fill="url(#isteCenter)" stroke="#D6A9FF" stroke-opacity="0.16" stroke-width="2"/>
+
+    <circle cx="256" cy="168" r="74" fill="#120C1F" stroke="#D7ACFF" stroke-width="3"/>
+    <circle cx="190" cy="328" r="66" fill="#120C1F" stroke="#D7ACFF" stroke-width="3"/>
+    <circle cx="322" cy="328" r="66" fill="#120C1F" stroke="#D7ACFF" stroke-width="3"/>
+
+    <text x="256" y="182" text-anchor="middle" fill="#F5E7FF" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="46" font-weight="800" letter-spacing="4">ISTE</text>
+
+    <path d="M190 302C182 318 181 336 188 352C193 364 202 374 214 382" stroke="#F1D8FF" stroke-width="5" stroke-linecap="round"/>
+    <path d="M200 306C207 322 206 342 198 354" stroke="#F1D8FF" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="190" cy="328" r="18" fill="none" stroke="#F1D8FF" stroke-width="5"/>
+
+    <circle cx="322" cy="328" r="28" fill="none" stroke="#F1D8FF" stroke-width="5"/>
+    <g transform="translate(322 328)">
+      <circle cx="0" cy="0" r="12" fill="#F1D8FF"/>
+      <g fill="#F1D8FF">
+        <rect x="-3" y="-34" width="6" height="14" rx="3"/>
+        <rect x="-3" y="20" width="6" height="14" rx="3"/>
+        <rect x="-34" y="-3" width="14" height="6" rx="3"/>
+        <rect x="20" y="-3" width="14" height="6" rx="3"/>
+        <rect x="-24" y="-24" width="6" height="14" rx="3" transform="rotate(-45)"/>
+        <rect x="18" y="-24" width="6" height="14" rx="3" transform="rotate(45)"/>
+        <rect x="-24" y="10" width="6" height="14" rx="3" transform="rotate(45)"/>
+        <rect x="18" y="10" width="6" height="14" rx="3" transform="rotate(-45)"/>
+      </g>
+    </g>
+
+    <text fill="#CFA9FF" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="5">
+      <textPath href="#topArc" startOffset="50%" text-anchor="middle">INDIAN SOCIETY FOR TECHNICAL EDUCATION</textPath>
+    </text>
+    <text fill="#CFA9FF" font-family="Avenir Next, Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="5">
+      <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">INDIAN SOCIETY FOR TECHNICAL EDUCATION</textPath>
+    </text>
+
+    <circle cx="256" cy="50" r="5" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="256" cy="462" r="4" fill="#FFFFFF" opacity="0.6"/>
+  </g>
+</svg>
